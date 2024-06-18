@@ -25,7 +25,7 @@ class _dashboardState extends State<dashboard> {
         type: BottomNavigationBarType.fixed,
         backgroundColor:  AppColors.whiteColor,
         currentIndex: _index,
-        selectedItemColor: Colors.white,
+        selectedItemColor: Colors.yellow,
         unselectedItemColor: const Color.fromARGB(255, 196, 192, 192),
         onTap: (int index) {
           setState(() {

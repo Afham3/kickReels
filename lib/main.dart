@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:kick_reels/views/SplashScreen/splash_screen.dart';
 import 'package:kick_reels/views/StartScreen/start_screen.dart';
-
+import 'package:get/get.dart';
 import 'views/CodeVerification/code_verification.dart';
 import 'views/HomePage/homepage.dart';
 import 'views/Login/login.dart';
@@ -15,14 +16,14 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
+    return  GetMaterialApp(
       title: 'Kick-Reels',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: Homepage(),
+      home: SplashScreen(),
     );
   }
 }

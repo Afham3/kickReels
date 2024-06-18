@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:kick_reels/utils/AppColors/color.dart';
 import 'package:kick_reels/views/CodeVerification/code_verification.dart';
+import 'package:get/get.dart';
+import 'package:kick_reels/views/Login/login.dart';
 class CreateAccount extends StatefulWidget {
   const CreateAccount({super.key});
 
@@ -41,7 +43,7 @@ class _CreateAccountState extends State<CreateAccount> {
                   height: height*0.07,
                   width: width*0.2,
                   child: const Image(
-                    image: AssetImage("assets/images/splash_logo.png"),
+                    image: AssetImage("assets/images/splashlogo.png"),
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -223,7 +225,8 @@ class _CreateAccountState extends State<CreateAccount> {
                           fontSize: 13,
                         ),),
                         TextButton(onPressed: () {
-                         // Navigator.push(context, MaterialPageRoute(builder: (context) => const LoginPage(),));
+                         Get.to(const LoginPage());
+                          // Navigator.push(context, MaterialPageRoute(builder: (context) => const LoginPage(),));
                         }, child: const  Text("Sign In",
                           style: TextStyle(
                             color:AppColors.yellowColor,

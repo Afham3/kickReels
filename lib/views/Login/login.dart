@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:kick_reels/utils/AppColors/color.dart';
-
+import 'package:get/get.dart';
+import 'package:kick_reels/views/CreateAccount/create_account.dart';
+import 'package:kick_reels/views/dashboard/dashboard.dart';
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
@@ -41,7 +43,7 @@ class _LoginPageState extends State<LoginPage> {
                   height: height*0.07,
                   width: width*0.2,
                   child: const Image(
-                    image: AssetImage("assets/images/splash_logo.png"),
+                    image: AssetImage("assets/images/splashlogo.png"),
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -144,6 +146,7 @@ class _LoginPageState extends State<LoginPage> {
                   SizedBox(height: height*0.03,),
                   InkWell(
                     onTap: (){
+                      Get.to(const dashboard());
                       //Navigator.push(context, MaterialPageRoute(builder: (context)=> const CodeVerification()));
                     },
                     child: Container(
@@ -237,6 +240,7 @@ class _LoginPageState extends State<LoginPage> {
                           fontSize: 13,
                         ),),
                         TextButton(onPressed: () {
+                          Get.to(const CreateAccount());
                           // Navigator.push(context, MaterialPageRoute(builder: (context) => const LoginPage(),));
                         }, child: const  Text("Sign Up",
                           style: TextStyle(

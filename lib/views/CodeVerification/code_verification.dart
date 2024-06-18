@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kick_reels/utils/AppColors/color.dart';
-
+import 'package:get/get.dart';
+import 'package:kick_reels/views/Login/login.dart';
 class CodeVerification extends StatefulWidget {
   const CodeVerification({super.key});
 
@@ -34,7 +35,7 @@ class _CodeVerificationState extends State<CodeVerification> {
                   height: height*0.07,
                   width: width*0.2,
                   child: const Image(
-                    image: AssetImage("assets/images/splash_logo.png"),
+                    image: AssetImage("assets/images/splashlogo.png"),
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -91,18 +92,23 @@ class _CodeVerificationState extends State<CodeVerification> {
 
                   ),
                   SizedBox(height: height*0.05,),
-                  Container(
-                    height: height*0.07,
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(width*0.02),
-                      color: AppColors.yellowColor,
-                    ),
-                    child: const Text("Verify",
-                      style: TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w400,
-                        color: AppColors.blackColor,
+                  InkWell(
+                    onTap: (){
+                      Get.to(const LoginPage());
+                    },
+                    child: Container(
+                      height: height*0.07,
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(width*0.02),
+                        color: AppColors.yellowColor,
+                      ),
+                      child: const Text("Verify",
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400,
+                          color: AppColors.blackColor,
+                        ),
                       ),
                     ),
                   ),

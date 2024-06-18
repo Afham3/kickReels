@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:kick_reels/utils/AppColors/color.dart';
-
+import 'package:kick_reels/utils/widgets/PopupButton.dart';
+import 'package:kick_reels/views/HomePage/NotificationPage.dart';
+import 'package:get/get.dart';
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
 
@@ -17,9 +19,12 @@ class _HomepageState extends State<Homepage> {
       backgroundColor: AppColors.whiteColor,
       appBar: AppBar(
         backgroundColor: AppColors.whiteColor,
-        leading: CircleAvatar(
-          radius: width*0.02,
-          backgroundImage: AssetImage("assets/iamges/splash_logo.png"),
+        leading: Padding(
+          padding: EdgeInsets.only(left: width*0.03, top: height*0.006),
+          child: CircleAvatar(
+            radius: width*0.02,
+            backgroundImage: AssetImage("assets/iamges/splashlogo.png"),
+          ),
         ),
         title: const Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -31,7 +36,7 @@ class _HomepageState extends State<Homepage> {
               color: AppColors.primaryTextTextColor
             ),
             ),
-            Icon(Icons.more_vert_rounded, color: AppColors.blackColor, size: 25,)
+            PopUpMenuButton(),
           ],
         ),
       ),
@@ -67,20 +72,25 @@ class _HomepageState extends State<Homepage> {
                       ),
                     ),
                     SizedBox(height: height*0.025,),
-                    Container(
-                      height: height*0.09,
-                      width: width*0.33,
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                        color: Colors.cyanAccent,
-                        borderRadius: BorderRadius.circular(width*0.03)
-                      ),
-                      child: const Text("Continue",
-                      style: TextStyle(
-                        fontWeight: FontWeight.w600,
-                        fontSize: 16,
-                        color: AppColors.whiteColor
-                      ),
+                    InkWell(
+                      onTap: (){
+                        Get.to(const NotificationPage());
+                      },
+                      child: Container(
+                        height: height*0.09,
+                        width: width*0.33,
+                        alignment: Alignment.center,
+                        decoration: BoxDecoration(
+                          color: Colors.cyanAccent,
+                          borderRadius: BorderRadius.circular(width*0.03)
+                        ),
+                        child: const Text("Continue",
+                        style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          fontSize: 16,
+                          color: AppColors.whiteColor
+                        ),
+                        ),
                       ),
                     ),
                   ],

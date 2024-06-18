@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:kick_reels/utils/AppColors/color.dart';
+import 'package:get/get.dart';
+import 'package:kick_reels/utils/widgets/PopupButton.dart';
 
+import 'start_recording.dart';
 class NotificationPage extends StatefulWidget {
   const NotificationPage({super.key});
 
@@ -17,9 +20,12 @@ class _NotificationPageState extends State<NotificationPage> {
       backgroundColor: AppColors.whiteColor,
       appBar: AppBar(
         backgroundColor: AppColors.whiteColor,
-        leading: CircleAvatar(
-          radius: width*0.02,
-          backgroundImage: AssetImage("assets/iamges/splash_logo.png"),
+        leading: Padding(
+          padding: EdgeInsets.only(left: width*0.03, top: height*0.006),
+          child: CircleAvatar(
+            radius: width*0.02,
+            backgroundImage: AssetImage("assets/iamges/splashlogo.png"),
+          ),
         ),
         title: const Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -31,7 +37,7 @@ class _NotificationPageState extends State<NotificationPage> {
                   color: AppColors.primaryTextTextColor
               ),
             ),
-            Icon(Icons.more_vert_rounded, color: AppColors.blackColor, size: 25,)
+            PopUpMenuButton(),
           ],
         ),
       ),
@@ -44,7 +50,7 @@ class _NotificationPageState extends State<NotificationPage> {
               margin: EdgeInsets.only(left: width*0.02, right: width*0.02,top: height*0.05),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(width*0.03),
-                color: Colors.grey[100],
+                color: Colors.cyan[50]
               ),
               child: Padding(
                 padding: EdgeInsets.only(left: width*0.05, right: width*0.05, top: height*0.02),
@@ -67,19 +73,52 @@ class _NotificationPageState extends State<NotificationPage> {
                       ),
                     ),
                     SizedBox(height: height*0.025,),
-                    Container(
-                      height: height*0.09,
-                      width: width*0.55,
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                          color: Colors.cyanAccent,
-                          borderRadius: BorderRadius.circular(width*0.03)
-                      ),
-                      child: const Text("Allow Notifications",
-                        style: TextStyle(
-                            fontWeight: FontWeight.w600,
-                            fontSize: 16,
-                            color: AppColors.whiteColor
+                    InkWell(
+                      onTap: (){
+                        Get.defaultDialog(
+                          title: "“Kick Reels” Would Like to Send You Notifications",
+                          titleStyle: const TextStyle(color: AppColors.whiteColor),
+                          middleText: "Notifications may include alerts,sounds and icon badges. These can be configured in settings.",
+                          middleTextStyle: const TextStyle(color: AppColors.whiteColor),
+                          textConfirm: "Allow",
+                          textCancel: "Don't Allow",
+                          confirmTextColor: AppColors.blueColor,
+                          cancelTextColor: AppColors.blueColor,
+                          backgroundColor: Colors.black45,
+                          onConfirm: (){
+                            Navigator.pop(context);
+                            Get.defaultDialog(
+                              title: "“Kick Reels” Would Like to Use Bluetooth",
+                              titleStyle: const TextStyle(color: AppColors.whiteColor),
+                              middleText: "Bluetooth is used by the app to talk to other nearby devices and exchange video data between them",
+                              middleTextStyle: const TextStyle(color: AppColors.whiteColor),
+                              textConfirm: "Allow",
+                              textCancel: "Don't Allow",
+                              confirmTextColor: AppColors.blueColor,
+                              cancelTextColor: AppColors.blueColor,
+                              backgroundColor: Colors.black45,
+                              onConfirm: (){
+                                Navigator.pop(context);
+                                Navigator.push(context, MaterialPageRoute(builder: (context) => StartRecording()));
+                              }
+                            );
+                          }
+                        );
+                      },
+                      child: Container(
+                        height: height*0.09,
+                        width: width*0.55,
+                        alignment: Alignment.center,
+                        decoration: BoxDecoration(
+                            color: Colors.cyanAccent,
+                            borderRadius: BorderRadius.circular(width*0.03)
+                        ),
+                        child: const Text("Allow Notifications",
+                          style: TextStyle(
+                              fontWeight: FontWeight.w600,
+                              fontSize: 16,
+                              color: AppColors.whiteColor
+                          ),
                         ),
                       ),
                     ),
