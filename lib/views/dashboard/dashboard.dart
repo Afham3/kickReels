@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kick_reels/utils/AppColors/color.dart';
 import 'package:kick_reels/views/HomePage/homepage.dart';
+import 'package:kick_reels/views/MyTeams/main_teamPage.dart';
 
 
 class dashboard extends StatefulWidget {
@@ -14,7 +15,7 @@ class _dashboardState extends State<dashboard> {
   int _index = 0;
   final List<Widget> _pages = const [
     Homepage(),
-    Homepage(),
+    MainTeamPage(),
     Homepage(),
     Homepage(),
   ];

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kick_reels/utils/AppColors/color.dart';
-
+import 'package:get/get.dart';
+import 'package:kick_reels/views/RemoteClipping/remote_clipping.dart';
 class PopUpMenuButton extends StatefulWidget {
   const PopUpMenuButton({super.key});
 
@@ -35,7 +36,7 @@ class _PopUpMenuButtonState extends State<PopUpMenuButton> {
               value: 2,
               child: ListTile(
                 onTap: () async{
-                  Navigator.pop(context);
+                  Get.to(const RemoteClipping());
                 },
                 title: const Text("Remote",
                   style: TextStyle(
@@ -49,3 +50,4 @@ class _PopUpMenuButtonState extends State<PopUpMenuButton> {
     );
   }
 }
+

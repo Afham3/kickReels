@@ -25,7 +25,7 @@ class _SplashScreenState extends State<SplashScreen> {
     final height = MediaQuery.sizeOf(context).height*1;
     final width = MediaQuery.sizeOf(context).width*1;
     return  Scaffold(
-      backgroundColor: Color(0xff324B4D),
+      backgroundColor: Color(0xee324B4D),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -36,16 +36,9 @@ class _SplashScreenState extends State<SplashScreen> {
               width: width*0.28,
               alignment: Alignment.center,
               decoration: BoxDecoration(
-                color: AppColors.whiteColor,
                 borderRadius: BorderRadius.circular(width*.35),
               ),
-              child: const Text("Hi,😊",
-              style: TextStyle(
-                fontSize: 25,
-                fontWeight: FontWeight.bold,
-                color: AppColors.blackColor,
-              ),
-              )
+              child: Image.asset('assets/images/splashlogo.png', fit: BoxFit.cover,)
               ),
           ),
         ],

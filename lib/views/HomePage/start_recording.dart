@@ -160,7 +160,7 @@ class CameraRecordingModeBottomSheet extends StatelessWidget {
     final height = MediaQuery.sizeOf(context).height*1;
     final width = MediaQuery.sizeOf(context).width*1;
     return Container(
-      height: height*0.7,
+      height: height*0.85,
       decoration:  BoxDecoration(
         color: AppColors.whiteColor,
         borderRadius: BorderRadius.only(

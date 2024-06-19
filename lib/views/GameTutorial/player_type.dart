@@ -6,18 +6,17 @@ import 'package:kick_reels/utils/AppColors/color.dart';
 import 'package:kick_reels/utils/widgets/reuseable_button.dart';
 import 'package:kick_reels/utils/widgets/stack_image.dart';
 import 'package:kick_reels/views/GameTutorial/by_player.dart';
+import 'package:kick_reels/views/GameTutorial/game_tutorial_main.dart';
 import '../../utils/widgets/PopupButton.dart';
 import 'package:get/get.dart';
-
-import 'player_type.dart';
-class GameTutorialMain extends StatefulWidget {
-  const GameTutorialMain({super.key});
+class PlayerType extends StatefulWidget {
+  const PlayerType({super.key});
 
   @override
-  State<GameTutorialMain> createState() => _GameTutorialMainState();
+  State<PlayerType> createState() => _PlayerTypeState();
 }
 
-class _GameTutorialMainState extends State<GameTutorialMain> {
+class _PlayerTypeState extends State<PlayerType> {
 
   bool remaining = false;
   bool active = false;
@@ -56,38 +55,44 @@ class _GameTutorialMainState extends State<GameTutorialMain> {
             Container(
               height: height*0.075,
               margin: EdgeInsets.only(left: width*0.01,
-              right: width*0.01),
+                  right: width*0.01),
               decoration: BoxDecoration(
-                color: Colors.grey[50]
+                  color: Colors.grey[50]
               ),
               child:  Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    InkWell(
-                        onTap: (){
-                          setState(() {
-                            active = !active;
-                          });
-                        },
-                        child: ReUseAbleButton(title: "All Clips", active: active,)),
-                    InkWell(
-                        onTap: (){
-                          setState(() {
-                            active = !active;
-                          });
-                        },
-                        child: ReUseAbleButton(title: "My Clips", active: false,)),
-                    InkWell(
-                        onTap: (){
-                          Get.to(ByPlayer());
-                        },
-                        child: ReUseAbleButton(title: "By Players", active: false,)),
-                    InkWell(
-                        onTap: (){
-                          Get.to(PlayerType());
-                        },
-                        child: ReUseAbleButton(title: "All Player Type", active: false,)),
-                  ],
+                children: [
+                  InkWell(
+                      onTap: (){
+                        setState(() {
+                          active = !active;
+                        });
+                        Get.to(GameTutorialMain());
+                      },
+                      child: ReUseAbleButton(title: "All Clips", active: false,)),
+                  InkWell(
+                      onTap: (){
+                        setState(() {
+                          active = !active;
+                        });
+                      },
+                      child: ReUseAbleButton(title: "My Clips", active: false,)),
+                  InkWell(
+                      onTap: (){
+                        setState(() {
+                          active = !active;
+                        });
+                        Get.to(ByPlayer());
+                      },
+                      child: ReUseAbleButton(title: "By Players", active: false,)),
+                  InkWell(
+                      onTap: (){
+                        setState(() {
+                          active = !active;
+                        });
+                      },
+                      child: ReUseAbleButton(title: "All Player Type", active: active,)),
+                ],
               ),
             ),
             SizedBox(height: height*0.03,),
@@ -102,11 +107,11 @@ class _GameTutorialMainState extends State<GameTutorialMain> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text("Tutorial Game",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: AppColors.primaryTextTextColor,
-                      fontSize: 16
-                    ),
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: AppColors.primaryTextTextColor,
+                          fontSize: 16
+                      ),
                     ),
                     Icon(Icons.arrow_forward_ios, size: 20, color: AppColors.blackColor,)
                   ],
@@ -114,12 +119,41 @@ class _GameTutorialMainState extends State<GameTutorialMain> {
               ),
             ),
             SizedBox(height: height*0.025,),
+            Container(
+              // height: height*0.075,
+              child: const Column(
+                children: [
+                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      PlayerTypeBox(title: 'Goal',),
+                      PlayerTypeBox(title: '+2',),
+                      PlayerTypeBox(title: 'Tackle',),
+                      PlayerTypeBox(title: 'Block',),
+                      PlayerTypeBox(title: 'Foul',),
+                    ],
+                  ),
+                  SizedBox(height: 10,),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      SizedBox(width: 5,),
+                      PlayerTypeBox(title: 'Wow',),
+                      SizedBox(width: 17,),
+                      PlayerTypeBox(title: 'Save',),
+
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: height*0.025,),
             InkWell(
-              onTap: (){
-                showModalBottomSheet(
-                    context: context,
-                    builder: (context) => const GameActions());
-              },
+                onTap: (){
+                  showModalBottomSheet(
+                      context: context,
+                      builder: (context) => const GameActions());
+                },
                 child: ImageStack()),
           ],
         ),
@@ -222,16 +256,46 @@ class _ReUseAbleTextFieldState extends State<ReUseAbleTextField> {
       child: Padding(
         padding:  EdgeInsets.only(left: width*0.04, top: height*0.015),
         child: Text(widget.title,
-        style:  TextStyle(
-          fontSize: 13,
-          color: widget.active? AppColors.redColor: AppColors.primaryTextTextColor,
-          fontWeight: FontWeight.w400
-        ),
+          style:  TextStyle(
+              fontSize: 13,
+              color: widget.active? AppColors.redColor: AppColors.primaryTextTextColor,
+              fontWeight: FontWeight.w400
+          ),
         ),
       ),
     );
   }
 }
 
+class PlayerTypeBox extends StatefulWidget {
+  final String title;
+  const PlayerTypeBox({super.key, required this.title});
+
+  @override
+  State<PlayerTypeBox> createState() => _PlayerTypeBoxState();
+}
+
+class _PlayerTypeBoxState extends State<PlayerTypeBox> {
+  @override
+  Widget build(BuildContext context) {
+    final height = MediaQuery.sizeOf(context).height*1;
+    final width = MediaQuery.sizeOf(context).width*1;
+    return Container(
+      height: height*0.05,
+      width: width*0.16,
+      alignment: Alignment.center,
+      decoration: BoxDecoration(
+        color: Colors.grey[100],
+        borderRadius: BorderRadius.circular(width*0.04),
+      ),
+      child: Text(widget.title,
+      style: const TextStyle(
+        fontSize: 13.5,
+        color: AppColors.secondaryTextColor
+      ),
+      ),
+    );
+  }
+}
 
 

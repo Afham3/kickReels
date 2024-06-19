@@ -27,16 +27,16 @@ class _CodeVerificationState extends State<CodeVerification> {
       body: SafeArea(
         child: Column(
           children: [
-            SizedBox(height: height*0.07,),
+            SizedBox(height: height*0.05,),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                  height: height*0.07,
-                  width: width*0.2,
+                  height: height*0.12,
+                  width: width*0.22,
                   child: const Image(
                     image: AssetImage("assets/images/splashlogo.png"),
-                    fit: BoxFit.cover,
+                    fit: BoxFit.contain,
                   ),
                 ),
               ],
@@ -58,7 +58,7 @@ class _CodeVerificationState extends State<CodeVerification> {
                   const Text("We've sent a verification code to your email",
                     style: TextStyle(
                         // fontWeight: FontWeight.bold,
-                        fontSize: 13,
+                        fontSize: 15,
                         color: AppColors.secondaryTextColor
                     ),
                   ),
@@ -105,7 +105,7 @@ class _CodeVerificationState extends State<CodeVerification> {
                       ),
                       child: const Text("Verify",
                         style: TextStyle(
-                          fontSize: 14,
+                          fontSize: 15,
                           fontWeight: FontWeight.w400,
                           color: AppColors.blackColor,
                         ),
