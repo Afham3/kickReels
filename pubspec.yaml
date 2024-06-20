@@ -10,6 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
   get: ^4.6.1
+  emerge_alert_dialog:
 
 dev_dependencies:
   flutter_test:

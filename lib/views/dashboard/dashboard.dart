@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:kick_reels/utils/AppColors/color.dart';
+import 'package:kick_reels/views/FAQ/faq_page.dart';
 import 'package:kick_reels/views/HomePage/homepage.dart';
 import 'package:kick_reels/views/MyTeams/main_teamPage.dart';
+import 'package:kick_reels/views/MyTeams/team_list.dart';
+import 'package:kick_reels/views/Profile/my_profile.dart';
 
 
 class dashboard extends StatefulWidget {
@@ -15,9 +18,10 @@ class _dashboardState extends State<dashboard> {
   int _index = 0;
   final List<Widget> _pages = const [
     Homepage(),
-    MainTeamPage(),
-    Homepage(),
-    Homepage(),
+    // MainTeamPage(),
+    TeamList(),
+    FaqPage(),
+    ProfilePage(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -43,7 +47,7 @@ class _dashboardState extends State<dashboard> {
             label: 'My Teams',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.question_mark),
+            icon: Icon(Icons.question_mark_rounded),
             label: 'FAQ',
           ),
           BottomNavigationBarItem(

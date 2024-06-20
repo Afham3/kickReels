@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:kick_reels/views/CreateAccount/create_account.dart';
-import 'package:kick_reels/views/GameTutorial/game_tutorial_main.dart';
-import 'package:kick_reels/views/SplashScreen/splash_screen.dart';
-import 'package:kick_reels/views/StartScreen/start_screen.dart';
+import 'package:kick_reels/utils/AppColors/color.dart';
+import 'package:kick_reels/views/FAQ/faq_page.dart';
+import 'package:kick_reels/views/MyTeams/create_team.dart';
 import 'package:get/get.dart';
-import 'package:kick_reels/views/dashboard/dashboard.dart';
-import 'views/CodeVerification/code_verification.dart';
-import 'views/HomePage/homepage.dart';
-import 'views/Login/login.dart';
-import 'views/MyTeams/team_list.dart';
+import 'package:kick_reels/views/MyTeams/main_teamPage.dart';
+import 'package:kick_reels/views/MyTeams/team_list.dart';
+import 'package:kick_reels/views/SplashScreen/splash_screen.dart';
+import 'package:kick_reels/views/TrainingTeam/training_team.dart';
+
+import 'views/Profile/my_profile.dart';
+
 
 void main() {
   runApp(const MainApp());
@@ -22,12 +23,16 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return  GetMaterialApp(
       title: 'Kick-Reels',
+
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
+        splashColor: Colors.transparent,
+        highlightColor: Colors.transparent
+        // primarySwatch: Colors.blue,
       ),
-      home: TeamList(),
+      home: const SplashScreen(),
     );
   }
 }

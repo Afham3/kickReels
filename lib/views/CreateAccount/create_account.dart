@@ -71,23 +71,23 @@ class _CreateAccountState extends State<CreateAccount> {
                       keyboardType: TextInputType.text,
                       decoration:  InputDecoration(
                         hintText: "Email Address",
-                        hintStyle: TextStyle(fontSize: 16,fontWeight: FontWeight.w500,color: Colors.black),
-                        fillColor: Colors.grey[200],
+                        hintStyle: TextStyle(fontSize: 16,fontWeight: FontWeight.w500,color:AppColors.secondaryTextColor),
+                        fillColor: Colors.grey[100],
                         filled: true,
                         border:  const OutlineInputBorder(
-                          borderSide: BorderSide(color: AppColors.textFieldDefaultBorderColor),
+                           borderSide: BorderSide.none,
                           borderRadius: BorderRadius.all(Radius.circular(8)),
                         ),
                         focusedBorder:  const OutlineInputBorder(
-                          borderSide: BorderSide(color: AppColors.greenColor),
+                          borderSide: BorderSide.none,
                           borderRadius: BorderRadius.all(Radius.circular(8)),
                         ),
                         errorBorder:  const OutlineInputBorder(
-                          borderSide: BorderSide(color: AppColors.redColor),
+                          borderSide: BorderSide.none,
                           borderRadius: BorderRadius.all(Radius.circular(8)),
                         ),
                         enabledBorder:  const OutlineInputBorder(
-                          borderSide: BorderSide(color:Colors.black12),
+                          borderSide: BorderSide.none,
                           borderRadius: BorderRadius.all(Radius.circular(8)),
                         ),
                         suffixIcon: Icon(
@@ -106,23 +106,27 @@ class _CreateAccountState extends State<CreateAccount> {
                       keyboardType: TextInputType.number,
                       decoration:  InputDecoration(
                         hintText: "Create Password",
-                        hintStyle: const TextStyle(fontSize: 16,fontWeight: FontWeight.w500,color: Colors.black),
-                        fillColor: Colors.grey[200],
+                        hintStyle: const TextStyle(fontSize: 16,fontWeight: FontWeight.w500,color:AppColors.secondaryTextColor),
+                        fillColor: Colors.grey[100],
                         filled: true,
                         border:  const OutlineInputBorder(
-                          borderSide: BorderSide(color: AppColors.textFieldDefaultBorderColor),
+                          borderSide: BorderSide.none,
+                          // borderSide: BorderSide(color: AppColors.textFieldDefaultBorderColor),
                           borderRadius: BorderRadius.all(Radius.circular(8)),
                         ),
                         focusedBorder: const  OutlineInputBorder(
-                          borderSide: BorderSide(color: AppColors.greenColor),
+                          borderSide: BorderSide.none,
+                          // borderSide: BorderSide(color: AppColors.greenColor),
                           borderRadius: BorderRadius.all(Radius.circular(8)),
                         ),
                         errorBorder: const  OutlineInputBorder(
-                          borderSide: BorderSide(color: AppColors.redColor),
+                          borderSide: BorderSide.none,
+                          // borderSide: BorderSide(color: AppColors.redColor),
                           borderRadius: BorderRadius.all(Radius.circular(8)),
                         ),
                         enabledBorder: const  OutlineInputBorder(
-                          borderSide: BorderSide(color:Colors.black12),
+                          borderSide: BorderSide.none,
+                          // borderSide: BorderSide(color:Colors.black12),
                           borderRadius: BorderRadius.all(Radius.circular(8)),
                         ),
                         suffixIcon: Icon(

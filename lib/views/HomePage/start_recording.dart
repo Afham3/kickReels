@@ -21,9 +21,16 @@ class _StartRecordingState extends State<StartRecording> {
         backgroundColor: AppColors.whiteColor,
         leading: Padding(
           padding: EdgeInsets.only(left: width*0.03, top: height*0.006),
-          child: CircleAvatar(
-            radius: width*0.01,
-            backgroundImage: AssetImage("assets/iamges/splashlogo.png"),
+          child:Container(
+            height: 35,
+            width: 35,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(18)
+            ),
+            child: const Image(
+              image:  AssetImage("assets/images/splashlogo.png"),
+              fit: BoxFit.contain,
+            ),
           ),
         ),
         title: const Row(
@@ -45,14 +52,14 @@ class _StartRecordingState extends State<StartRecording> {
           children: [
             Card(
               margin: EdgeInsets.only(left: width*0.02, right: width*0.02,top: height*0.05),
-              elevation: 5,
+              elevation: 1.5,
               child: Container(
                 height: height*0.3,
                 width: width*1,
                 // margin: EdgeInsets.only(left: width*0.02, right: width*0.02,top: height*0.05),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(width*0.03),
-                  color: Colors.yellow[50],
+                  color: Colors.lime[100],
                 ),
                 child: Padding(
                   padding: EdgeInsets.only(left: width*0.05, right: width*0.05, top: height*0.02),
@@ -84,8 +91,8 @@ class _StartRecordingState extends State<StartRecording> {
                           );
                         },
                         child: Container(
-                          height: height*0.09,
-                          width: width*0.33,
+                          height: height*0.065,
+                          width: width*0.45,
                           alignment: Alignment.center,
                           decoration: BoxDecoration(
                               color: AppColors.yellowColor,
@@ -115,26 +122,26 @@ class _StartRecordingState extends State<StartRecording> {
                     mainAxisAlignment:MainAxisAlignment.spaceBetween,
                     children: [
                       Container(
-                        height: height*0.015,
-                        width: width*0.02,
+                        height: 12,
+                        width: 12,
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(width*0.01),
+                          borderRadius: BorderRadius.circular(6),
                           color: AppColors.grey,
                         ),
                       ),
                       Container(
-                        height: height*0.015,
-                        width: width*0.02,
+                        height: 12,
+                        width: 12,
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(width*0.01),
+                          borderRadius: BorderRadius.circular(6),
                           color: AppColors.grey,
                         ),
                       ),
                       Container(
-                        height: height*0.015,
-                        width: width*0.05,
+                        height: 12,
+                        width: 12,
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(width*0.01),
+                          borderRadius: BorderRadius.circular(6),
                           color: AppColors.blackColor,
                         ),
                       ),

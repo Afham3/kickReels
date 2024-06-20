@@ -21,8 +21,8 @@ class _SkipButtonState extends State<SkipButton> {
         Get.to(const CreateAccount());
       },
       child: Container(
-        height: height*0.05,
-        width: width*0.1,
+        height: 25,
+        width: 35,
         margin: EdgeInsets.all(width*0.015),
         alignment: Alignment.center,
         decoration: BoxDecoration(

@@ -40,8 +40,11 @@ class _StartScreenTwoState extends State<StartScreenTwo> {
             ),
             SizedBox(height: height*0.15),
             Container(
-              height: height*0.2,
-              width: width*0.28,
+              height: 100,
+              width: 100,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(50)
+              ),
               child: const Image(
                 image:AssetImage('assets/images/splashlogo.png'),
                 fit: BoxFit.cover,
@@ -71,7 +74,7 @@ class _StartScreenTwoState extends State<StartScreenTwo> {
                 ],
               ),
             ),
-            SizedBox(height: height*0.20),
+            SizedBox(height: height*0.3),
             Container(
               margin: EdgeInsets.only(left: width*0.05,right: width*0.05,),
               child: Row(
@@ -83,34 +86,34 @@ class _StartScreenTwoState extends State<StartScreenTwo> {
                       mainAxisAlignment:MainAxisAlignment.spaceBetween,
                       children: [
                         Container(
-                          height: height*0.015,
-                          width: width*0.02,
+                          height: 10,
+                          width: 10,
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(width*0.01),
+                            borderRadius: BorderRadius.circular(5),
                             color: AppColors.grey,
                           ),
                         ),
                         Container(
-                          height: height*0.015,
-                          width: width*0.02,
+                          height: 10,
+                          width: 10,
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(width*0.01),
-                            color: AppColors.grey,
-                          ),
-                        ),
-                        Container(
-                          height: height*0.015,
-                          width: width*0.05,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(width*0.01),
+                            borderRadius: BorderRadius.circular(5),
                             color: AppColors.blackColor,
                           ),
                         ),
                         Container(
-                          height: height*0.015,
-                          width: width*0.02,
+                          height: 10,
+                          width: 10,
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(width*0.01),
+                            borderRadius: BorderRadius.circular(5),
+                            color: AppColors.grey,
+                          ),
+                        ),
+                        Container(
+                          height: 10,
+                          width: 10,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(5),
                             color: AppColors.grey,
                           ),
                         ),
@@ -118,11 +121,11 @@ class _StartScreenTwoState extends State<StartScreenTwo> {
                     ),
                   ),
                   Container(
-                    height: height*0.07,
-                    width: width*0.10,
+                    height: 40,
+                    width: 40,
                     alignment: Alignment.center,
                     decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(width*0.05),
+                        borderRadius: BorderRadius.circular(20),
                         color: AppColors.whiteColor,
                         border: Border.all(color: AppColors.blackColor, width: 3)
                     ),

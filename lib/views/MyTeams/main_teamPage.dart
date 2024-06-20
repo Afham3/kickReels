@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:kick_reels/utils/AppColors/color.dart';
+import 'package:kick_reels/views/MyTeams/create_team.dart';
 
 import '../../utils/widgets/TeamsPopUp_Button.dart';
 
@@ -83,20 +84,26 @@ class _MainTeamPageState extends State<MainTeamPage> {
                       ),
                     ),
                   ),
-                  Container(
-                    height: height*0.045,
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                      color: AppColors.yellowColor,
-                      borderRadius: BorderRadius.circular(width*0.05),
-                    ),
-                    child: const Padding(
-                      padding:  EdgeInsets.only(left: 8, right: 8),
-                      child:  Text("Create Team",
-                        style: TextStyle(
-                            color: AppColors.primaryTextTextColor,
-                            fontSize: 14.5,
-                            fontWeight: FontWeight.w600
+                  InkWell(
+                    onTap: ()
+                    {
+                      Get.to(CreateTeam());
+                    },
+                    child: Container(
+                      height: height*0.045,
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        color: AppColors.yellowColor,
+                        borderRadius: BorderRadius.circular(width*0.05),
+                      ),
+                      child: const Padding(
+                        padding:  EdgeInsets.only(left: 8, right: 8),
+                        child:  Text("Create Team",
+                          style: TextStyle(
+                              color: AppColors.primaryTextTextColor,
+                              fontSize: 14.5,
+                              fontWeight: FontWeight.w600
+                          ),
                         ),
                       ),
                     ),
