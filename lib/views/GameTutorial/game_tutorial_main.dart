@@ -26,7 +26,7 @@ class _GameTutorialMainState extends State<GameTutorialMain> {
     final height = MediaQuery.sizeOf(context).height*1;
     final width = MediaQuery.sizeOf(context).width*1;
     return Scaffold(
-      backgroundColor: AppColors.whiteColor,
+      backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: AppColors.whiteColor,
         leading: Padding(

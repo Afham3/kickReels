@@ -16,6 +16,7 @@ class _ContactPageState extends State<ContactPage> {
     final height = MediaQuery.sizeOf(context).height*1;
     final width = MediaQuery.sizeOf(context).width*1;
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         centerTitle: true,
         title:  const Text("Contact",

@@ -17,6 +17,7 @@ class _ManagerState extends State<Manager> {
     final height = MediaQuery.sizeOf(context).height*1;
     final width = MediaQuery.sizeOf(context).width*1;
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0,
         centerTitle: true,

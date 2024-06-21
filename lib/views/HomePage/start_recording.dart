@@ -16,7 +16,7 @@ class _StartRecordingState extends State<StartRecording> {
     final height = MediaQuery.sizeOf(context).height*1;
     final width = MediaQuery.sizeOf(context).width*1;
     return Scaffold(
-      backgroundColor: AppColors.whiteColor,
+      backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: AppColors.whiteColor,
         leading: Padding(
@@ -95,7 +95,7 @@ class _StartRecordingState extends State<StartRecording> {
                           width: width*0.45,
                           alignment: Alignment.center,
                           decoration: BoxDecoration(
-                              color: AppColors.yellowColor,
+                              color: Colors.yellow[300],
                               borderRadius: BorderRadius.circular(width*0.03)
                           ),
                           child: const Text("Start Recording",
@@ -139,7 +139,7 @@ class _StartRecordingState extends State<StartRecording> {
                       ),
                       Container(
                         height: 12,
-                        width: 12,
+                        width: 16,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(6),
                           color: AppColors.blackColor,

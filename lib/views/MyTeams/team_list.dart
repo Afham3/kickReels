@@ -17,9 +17,10 @@ class _TeamListState extends State<TeamList> {
     final height = MediaQuery.sizeOf(context).height*1;
     final width = MediaQuery.sizeOf(context).width*1;
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         // centerTitle: true,
-        backgroundColor: AppColors.whiteColor,
+        backgroundColor: Colors.white,
         title:  Padding(
           padding:  EdgeInsets.only(left: width*0.25),
           child: Row(
@@ -182,7 +183,7 @@ class _TeamTileState extends State<TeamTile> {
                       width: width*0.25,
                       alignment: Alignment.center,
                       decoration: BoxDecoration(
-                        color: widget.status? Colors.grey[100] : AppColors.yellowColor,
+                        color: widget.status? Colors.grey[100] : Colors.yellow[700],
                         borderRadius: BorderRadius.circular(width*0.035)
                       ),
                       child: Row(
@@ -266,7 +267,7 @@ class SubscriptionPlan extends StatelessWidget {
                 width: width*1,
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
-                    color: AppColors.yellowColor,
+                    color: Colors.yellow[700],
                     borderRadius: BorderRadius.circular(width*0.03)
                 ),
                 child: const Text("Continue",

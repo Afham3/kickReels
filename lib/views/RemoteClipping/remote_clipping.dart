@@ -16,6 +16,7 @@ class _RemoteClippingState extends State<RemoteClipping> {
     final height = MediaQuery.sizeOf(context).height*1;
     final width = MediaQuery.sizeOf(context).width*1;
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: AppColors.whiteColor,
@@ -286,8 +287,8 @@ class _ReUseAbleTextFieldState extends State<ReUseAbleTextField> {
         padding:  EdgeInsets.only(left: width*0.04, top: height*0.015),
         child: Text(widget.title,
           style:  TextStyle(
-              fontSize: 14,
-              color: widget.active? AppColors.yellowColor: AppColors.primaryTextTextColor,
+              fontSize: 15,
+              color: widget.active? Colors.yellow[700] : AppColors.primaryTextTextColor,
               fontWeight:FontWeight.bold,
           ),
         ),

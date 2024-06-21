@@ -18,6 +18,7 @@ class _ProfilePageState extends State<ProfilePage> {
     final height = MediaQuery.sizeOf(context).height*1;
     final width = MediaQuery.sizeOf(context).width*1;
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         centerTitle: true,
         title:  const Row(

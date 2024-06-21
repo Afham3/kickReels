@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kick_reels/utils/AppColors/color.dart';
+import 'package:kick_reels/views/CreateAccount/create_account.dart';
 import 'package:kick_reels/views/FAQ/faq_page.dart';
 import 'package:kick_reels/views/MyTeams/create_team.dart';
 import 'package:get/get.dart';
@@ -32,7 +33,7 @@ class MainApp extends StatelessWidget {
         highlightColor: Colors.transparent
         // primarySwatch: Colors.blue,
       ),
-      home: const SplashScreen(),
+      home: const CreateAccount(),
     );
   }
 }

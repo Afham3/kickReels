@@ -111,7 +111,7 @@ class _StartScreenThreeState extends State<StartScreenThree> {
                         // ),
                         Container(
                           height: 10,
-                          width: 10,
+                          width: 15,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(5),
                             color: AppColors.blackColor,

@@ -27,7 +27,7 @@ class _SkipButtonState extends State<SkipButton> {
         alignment: Alignment.center,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(width * 0.04),
-          color: Color(0xE0DDDDFF),
+          color: Colors.grey[50]
         ),
         child: const Text("Skip",
           style: TextStyle(

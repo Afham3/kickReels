@@ -18,9 +18,10 @@ class _MainTeamPageState extends State<MainTeamPage> {
     final height = MediaQuery.sizeOf(context).height*1;
     final width = MediaQuery.sizeOf(context).width*1;
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         // centerTitle: true,
-        backgroundColor: AppColors.whiteColor,
+        backgroundColor: Colors.white,
         title:  Padding(
           padding:  EdgeInsets.only(left: width*0.25),
           child: Row(
@@ -93,7 +94,7 @@ class _MainTeamPageState extends State<MainTeamPage> {
                       height: height*0.045,
                       alignment: Alignment.center,
                       decoration: BoxDecoration(
-                        color: AppColors.yellowColor,
+                        color: Colors.yellow[700],
                         borderRadius: BorderRadius.circular(width*0.05),
                       ),
                       child: const Padding(

@@ -30,7 +30,7 @@ class _CreateAccountState extends State<CreateAccount> {
     final height = MediaQuery.sizeOf(context).height*1;
     final width = MediaQuery.sizeOf(context).width*1;
     return Scaffold(
-      backgroundColor: AppColors.whiteColor,
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: Column(
 
@@ -56,7 +56,7 @@ class _CreateAccountState extends State<CreateAccount> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text("Create Account",
+                  const Text("Create account",
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 22,
@@ -70,7 +70,7 @@ class _CreateAccountState extends State<CreateAccount> {
                       focusNode: emailFocus,
                       keyboardType: TextInputType.text,
                       decoration:  InputDecoration(
-                        hintText: "Email Address",
+                        hintText: "Email address",
                         hintStyle: TextStyle(fontSize: 16,fontWeight: FontWeight.w500,color:AppColors.secondaryTextColor),
                         fillColor: Colors.grey[100],
                         filled: true,
@@ -91,7 +91,7 @@ class _CreateAccountState extends State<CreateAccount> {
                           borderRadius: BorderRadius.all(Radius.circular(8)),
                         ),
                         suffixIcon: Icon(
-                          Icons.email_outlined, color: Colors.black,),
+                          Icons.email_outlined, color: Colors.grey[800],),
                       ),
                       onFieldSubmitted: (value){
                         emailFocus.unfocus();
@@ -105,7 +105,7 @@ class _CreateAccountState extends State<CreateAccount> {
                       focusNode: passwordFocus,
                       keyboardType: TextInputType.number,
                       decoration:  InputDecoration(
-                        hintText: "Create Password",
+                        hintText: "Create password",
                         hintStyle: const TextStyle(fontSize: 16,fontWeight: FontWeight.w500,color:AppColors.secondaryTextColor),
                         fillColor: Colors.grey[100],
                         filled: true,
@@ -130,7 +130,7 @@ class _CreateAccountState extends State<CreateAccount> {
                           borderRadius: BorderRadius.all(Radius.circular(8)),
                         ),
                         suffixIcon: Icon(
-                          Icons.visibility_off, color: Colors.black,),
+                          Icons.visibility_off, color: Colors.grey[800],),
                       ),
                   ),
                   SizedBox(height: height*0.04,),
@@ -143,9 +143,9 @@ class _CreateAccountState extends State<CreateAccount> {
                       alignment: Alignment.center,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(width*0.02),
-                        color: AppColors.yellowColor,
+                        color: Colors.yellow[700]
                       ),
-                      child: const Text("Create Account",
+                      child: const Text("Create account",
                       style: TextStyle(
                         fontSize: 15,
                         fontWeight: FontWeight.w500,
@@ -156,7 +156,7 @@ class _CreateAccountState extends State<CreateAccount> {
                   ),
                   SizedBox(height: height*0.05,),
                   const Center(
-                    child: Text("_____________________or_____________________",
+                    child: Text("_________________________or_________________________",
                     style: TextStyle(
                       color: AppColors.grey,
                       fontSize: 14,

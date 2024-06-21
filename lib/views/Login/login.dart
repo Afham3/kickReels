@@ -30,7 +30,7 @@ class _LoginPageState extends State<LoginPage> {
     final height = MediaQuery.sizeOf(context).height*1;
     final width = MediaQuery.sizeOf(context).width*1;
     return Scaffold(
-      backgroundColor: AppColors.whiteColor,
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: Column(
 
@@ -95,7 +95,7 @@ class _LoginPageState extends State<LoginPage> {
                           borderRadius: BorderRadius.all(Radius.circular(8)),
                         ),
                         suffixIcon: Icon(
-                          Icons.email_outlined, color: Colors.black,),
+                          Icons.email_outlined, color: Colors.grey[800]),
                       ),
                       onFieldSubmitted: (value){
                         emailFocus.unfocus();
@@ -134,7 +134,7 @@ class _LoginPageState extends State<LoginPage> {
                         borderRadius: BorderRadius.all(Radius.circular(8)),
                       ),
                       suffixIcon: Icon(
-                        Icons.visibility_off, color: Colors.black,),
+                        Icons.visibility_off, color: Colors.grey[800]),
                     ),
                   ),
                   Row(
@@ -162,7 +162,7 @@ class _LoginPageState extends State<LoginPage> {
                       alignment: Alignment.center,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(width*0.02),
-                        color: AppColors.yellowColor,
+                        color: Colors.yellow[700]
                       ),
                       child: const Text("Log In",
                         style: TextStyle(
@@ -175,7 +175,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   SizedBox(height: height*0.035,),
                   const Center(
-                    child: Text("_____________________or_____________________",
+                    child: Text("_________________________or_________________________",
                       style: TextStyle(
                         color: AppColors.grey,
                         fontSize: 14,

@@ -23,7 +23,7 @@ class _CodeVerificationState extends State<CodeVerification> {
     final height = MediaQuery.sizeOf(context).height*1;
     final width = MediaQuery.sizeOf(context).width*1;
     return Scaffold(
-      backgroundColor: AppColors.whiteColor,
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: Column(
           children: [
@@ -57,42 +57,42 @@ class _CodeVerificationState extends State<CodeVerification> {
                   ),
                   const Text("We've sent a verification code to your email",
                     style: TextStyle(
-                        // fontWeight: FontWeight.bold,
+                      // fontWeight: FontWeight.bold,
                         fontSize: 15,
                         color: AppColors.secondaryTextColor
                     ),
                   ),
                   SizedBox(height: height*0.035,),
                   TextFormField(
-                      style: const TextStyle(fontWeight: FontWeight.w400,color:Colors.black),
-                      controller: codeController,
-                      keyboardType: TextInputType.text,
-                      decoration:  InputDecoration(
-                        hintText: "Enter Code",
-                        hintStyle: TextStyle(fontSize: 14,fontWeight: FontWeight.w500,color:AppColors.secondaryTextColor),
-                        fillColor: Colors.grey[100],
-                        filled: true,
-                        border:  const OutlineInputBorder(
-                          borderSide: BorderSide.none,
-                          // borderSide: BorderSide(color: AppColors.textFieldDefaultBorderColor),
-                          borderRadius: BorderRadius.all(Radius.circular(8)),
-                        ),
-                        focusedBorder:  const OutlineInputBorder(
-                          borderSide: BorderSide.none,
-                          // borderSide: BorderSide(color: AppColors.greenColor),
-                          borderRadius: BorderRadius.all(Radius.circular(8)),
-                        ),
-                        errorBorder:  const OutlineInputBorder(
-                          borderSide: BorderSide.none,
-                          // borderSide: BorderSide(color: AppColors.redColor),
-                          borderRadius: BorderRadius.all(Radius.circular(8)),
-                        ),
-                        enabledBorder:  const OutlineInputBorder(
-                          borderSide: BorderSide.none,
-                          // borderSide: BorderSide(color:Colors.black12),
-                          borderRadius: BorderRadius.all(Radius.circular(8)),
-                        ),
+                    style: const TextStyle(fontWeight: FontWeight.w400,color:Colors.black),
+                    controller: codeController,
+                    keyboardType: TextInputType.text,
+                    decoration:  InputDecoration(
+                      hintText: "Enter Code",
+                      hintStyle: TextStyle(fontSize: 14,fontWeight: FontWeight.w500,color:AppColors.secondaryTextColor),
+                      fillColor: Colors.grey[100],
+                      filled: true,
+                      border:  const OutlineInputBorder(
+                        borderSide: BorderSide.none,
+                        // borderSide: BorderSide(color: AppColors.textFieldDefaultBorderColor),
+                        borderRadius: BorderRadius.all(Radius.circular(8)),
                       ),
+                      focusedBorder:  const OutlineInputBorder(
+                        borderSide: BorderSide.none,
+                        // borderSide: BorderSide(color: AppColors.greenColor),
+                        borderRadius: BorderRadius.all(Radius.circular(8)),
+                      ),
+                      errorBorder:  const OutlineInputBorder(
+                        borderSide: BorderSide.none,
+                        // borderSide: BorderSide(color: AppColors.redColor),
+                        borderRadius: BorderRadius.all(Radius.circular(8)),
+                      ),
+                      enabledBorder:  const OutlineInputBorder(
+                        borderSide: BorderSide.none,
+                        // borderSide: BorderSide(color:Colors.black12),
+                        borderRadius: BorderRadius.all(Radius.circular(8)),
+                      ),
+                    ),
 
                   ),
                   SizedBox(height: height*0.05,),
@@ -105,7 +105,7 @@ class _CodeVerificationState extends State<CodeVerification> {
                       alignment: Alignment.center,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(width*0.02),
-                        color: AppColors.yellowColor,
+                        color:Colors.yellow[700],
                       ),
                       child: const Text("Verify",
                         style: TextStyle(

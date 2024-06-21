@@ -23,9 +23,10 @@ class _CreateTeamState extends State<CreateTeam> {
     final height = MediaQuery.sizeOf(context).height*1;
     final width = MediaQuery.sizeOf(context).width*1;
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: AppColors.whiteColor,
+        backgroundColor: Colors.white,
         title:  const Text("My Teams",
           style: TextStyle(
               fontSize: 15,

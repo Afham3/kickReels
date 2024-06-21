@@ -19,15 +19,16 @@ class _AddPlayerState extends State<AddPlayer> {
     final height = MediaQuery.sizeOf(context).height*1;
     final width = MediaQuery.sizeOf(context).width*1;
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0,
         centerTitle: true,
         title: const Text("Add Player",
-        style: TextStyle(
-          fontSize: 16,
-          color: AppColors.blackColor,
-          fontWeight: FontWeight.bold
-        ),
+          style: TextStyle(
+              fontSize: 16,
+              color: AppColors.blackColor,
+              fontWeight: FontWeight.bold
+          ),
         ),
         leading: const BackButton(color: AppColors.blackColor,),
       ),
@@ -40,11 +41,11 @@ class _AddPlayerState extends State<AddPlayer> {
           Padding(
             padding:  EdgeInsets.only(left: width*0.05),
             child: const Text("Name",
-            style: TextStyle(
-              fontSize: 13.5,
-              fontWeight: FontWeight.normal,
-              color: AppColors.primaryTextTextColor,
-            ),),
+              style: TextStyle(
+                fontSize: 13.5,
+                fontWeight: FontWeight.normal,
+                color: AppColors.primaryTextTextColor,
+              ),),
           ),
           Container(
             margin: EdgeInsets.only(left: width*0.05, right: width*0.05),
@@ -134,7 +135,7 @@ class _AddPlayerState extends State<AddPlayer> {
               alignment: Alignment.center,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(width*0.02),
-                color: AppColors.yellowColor,
+                color: Colors.yellow[700],
               ),
               child: const Text("Save",
                 style: TextStyle(

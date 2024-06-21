@@ -66,7 +66,7 @@ class _StartScreenState extends State<StartScreen> {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  Text("Experience the Thrill, Record and Relieve Your Favourite Sports Moments",
+                  Text("Experience the Thrill, Record and Relive Your Favorite Sports Moments",
                     style: TextStyle(
                       color: AppColors.secondaryTextColor,
                       fontSize: 15,
@@ -89,7 +89,7 @@ class _StartScreenState extends State<StartScreen> {
                       children: [
                         Container(
                           height: 10,
-                          width: 10,
+                          width: 15,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(5),
                             color: AppColors.blackColor,

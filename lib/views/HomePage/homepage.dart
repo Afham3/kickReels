@@ -16,7 +16,7 @@ class _HomepageState extends State<Homepage> {
     final height = MediaQuery.sizeOf(context).height*1;
     final width = MediaQuery.sizeOf(context).width*1;
     return Scaffold(
-      backgroundColor: AppColors.whiteColor,
+      backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: AppColors.whiteColor,
         leading: Padding(
@@ -115,7 +115,7 @@ class _HomepageState extends State<Homepage> {
                     children: [
                       Container(
                         height: 12,
-                        width: 12,
+                        width: 16,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(6),
                           color: AppColors.blackColor,
